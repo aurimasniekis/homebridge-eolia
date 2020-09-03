@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
+  "pluginAlias": "PanasonicEolia",
   "pluginType": "platform",
   "singular": true,
   "schema": {
@@ -9,7 +9,37 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "Home"
+      },
+      "userId": {
+        "title": "Panasonic Club User Id",
+        "type": "string",
+        "required": true
+      },
+      "password": {
+        "title": "Panasonic Club Password",
+        "type": "string",
+        "required": true
+      },
+      "airConditionerRename": {
+        "title": "Rename AirConditioner Nicknames",
+        "type": "array",
+        "items": {
+          "title": "Rename Air Conditioner",
+          "type": "object",
+          "properties": {
+            "nickname": {
+              "title": "Original Name",
+              "type": "string",
+              "required": true
+            },
+            "alias": {
+              "title": "New Alias",
+              "type": "string",
+              "required": true
+            }
+          }
+        }
       }
     }
   }
